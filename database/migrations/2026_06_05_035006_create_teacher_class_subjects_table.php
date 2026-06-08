@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
         Schema::create('teacher_class_subjects', function (Blueprint $table) {
-            $table->id(); // int (PK)
+            $table->id(); 
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
             $table->foreignId('class_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('teacher_id')->constrained('teachers')->onDelete('cascade');

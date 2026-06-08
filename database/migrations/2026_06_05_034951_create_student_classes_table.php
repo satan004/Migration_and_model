@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
         Schema::create('student_classes', function (Blueprint $table) {
-            $table->id(); // int (PK)
+            $table->id(); 
             $table->foreignId('class_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('student_id')->constrained('students')->onDelete('cascade');
             $table->timestamps();

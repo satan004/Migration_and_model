@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
         Schema::create('terms', function (Blueprint $table) {
-            $table->id(); // int (PK)
+            $table->id(); 
             $table->string('name');
             $table->foreignId('generation_id')->constrained('generations')->onDelete('cascade');
             $table->timestamps();
